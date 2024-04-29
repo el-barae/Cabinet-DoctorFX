@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cabinetdoctor.Controles.RendezVousController">
+
+    <VBox alignment="CENTER" prefHeight="650.0" prefWidth="1000.0" spacing="20.0" style="-fx-background-color: #17C9F9;">
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        </padding>
+
+        <Label fx:id="welcomeText" />
+        <Pane prefHeight="162.0" prefWidth="960.0">
+            <children>
+                <Button fx:id="addButton" layoutX="22.0" layoutY="91.0" mnemonicParsing="false" onAction="#ajouterRendezVous" prefHeight="38.0" prefWidth="120.0" text="Ajouter" />
+                <Button fx:id="modifyButton" layoutX="217.0" layoutY="91.0" mnemonicParsing="false" onAction="#modifierRendezVous" prefHeight="38.0" prefWidth="120.0" text="Modifier" />
+                <Button fx:id="exportButton" layoutX="409.0" layoutY="91.0" mnemonicParsing="false" onAction="#exporterRendezVous" prefHeight="38.0" prefWidth="120.0" text="Exporter" />
+                <Button fx:id="deleteButton" layoutX="589.0" layoutY="91.0" mnemonicParsing="false" onAction="#supprimerRendezVous" prefHeight="38.0" prefWidth="120.0" text="Supprimer" />
+                <Label layoutX="26.0" layoutY="-5.0" prefHeight="38.0" prefWidth="112.0" text="Note :">
+                    <font>
+                        <Font name="DejaVu Sans Bold" size="14.0" />
+                    </font></Label>
+                <Label layoutX="520.0" prefHeight="38.0" prefWidth="112.0" text="Date :">
+                    <font>
+                        <Font name="DejaVu Sans Bold" size="14.0" />
+                    </font></Label>
+                <Label layoutX="22.0" layoutY="38.0" prefHeight="38.0" prefWidth="112.0" text="Heure :">
+                    <font>
+                        <Font name="DejaVu Sans Bold" size="14.0" />
+                    </font></Label>
+                <Label layoutX="523.0" layoutY="38.0" prefHeight="38.0" prefWidth="131.0" text="CIN de patient :">
+                    <font>
+                        <Font name="DejaVu Sans Bold" size="14.0" />
+                    </font></Label>
+                <TextField fx:id="txtNote" layoutX="190.0" layoutY="-1.0" prefHeight="30.0" prefWidth="219.0" promptText="Saisir note" />
+                <DatePicker fx:id="txtDate" layoutX="714.0" layoutY="4.0" prefHeight="30.0" prefWidth="219.0" promptText="AAAA-MM-JJ" />
+                <TextField fx:id="txtCIN" layoutX="714.0" layoutY="42.0" prefHeight="30.0" prefWidth="219.0" promptText="Saisir CIN du patient" />
+                <TextField fx:id="txtHeure" layoutX="190.0" layoutY="42.0" prefHeight="30.0" prefWidth="219.0" promptText="HH:MM:SS" />
+            <Button fx:id="deleteButton1" layoutX="768.0" layoutY="91.0" mnemonicParsing="false" onAction="#supprimerRvExpires" prefHeight="38.0" prefWidth="165.0" text="Supprimer RV expirés" />
+            <BorderPane layoutX="-6.0" layoutY="-58.0" prefHeight="53.0" prefWidth="971.0">
+               <center>
+                  <Label prefHeight="35.0" prefWidth="288.0" text="Gestion des rendez-vous" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </center>
+            </BorderPane>
+            </children>
+        </Pane>
+        <Pane prefHeight="416.0" prefWidth="960.0">
+            <children>
+                <TableView fx:id="table" accessibleRole="IMAGE_VIEW" layoutY="-20.0" prefHeight="428.0" prefWidth="960.0">
+                    <columns>
+                        <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="noteCol" prefWidth="419.0" text="Note" />
+                        <TableColumn fx:id="dateCol" prefWidth="173.0" text="Date" />
+                        <TableColumn fx:id="heureCol" prefWidth="155.0" text="Heure" />
+                        <TableColumn fx:id="cinCol" prefWidth="92.0" text="CIN" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </children>
+        </Pane>
+    </VBox>
+
+</AnchorPane>

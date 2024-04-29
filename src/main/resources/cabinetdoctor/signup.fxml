@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cabinetdoctor.Controles.Controller">
+   <left>
+      <AnchorPane prefHeight="415.0" prefWidth="300.0" style="-fx-background-color: #e3e3e3;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="61.0" layoutY="14.0" prefHeight="66.0" prefWidth="192.0" text="Sign Up" textAlignment="CENTER" textFill="#1dbbc6">
+               <font>
+                  <Font name="IBM Plex Sans Bold" size="44.0" />
+               </font>
+            </Label>
+            <Label layoutX="62.0" layoutY="80.0" text="Welcome to our Application" textAlignment="CENTER" />
+            <Label layoutX="21.0" layoutY="121.0" text="CIN:" />
+            <TextField fx:id="cinTextField" layoutX="99.0" layoutY="116.0" prefHeight="25.0" prefWidth="170.0" promptText="CIN" />
+            <Label layoutX="18.0" layoutY="154.0" text="Username:" />
+            <TextField fx:id="usernameTextField" layoutX="99.0" layoutY="149.0" prefHeight="25.0" prefWidth="170.0" promptText="Username" />
+            <Label layoutX="21.0" layoutY="186.0" text="Email:" />
+            <TextField fx:id="emailTextField" layoutX="99.0" layoutY="181.0" prefHeight="25.0" prefWidth="170.0" promptText="Email" />
+            <Label layoutX="21.0" layoutY="221.0" text="Password:" />
+            <PasswordField fx:id="passwordField" layoutX="99.0" layoutY="216.0" prefHeight="25.0" prefWidth="170.0" promptText="Password" />
+            <Button fx:id="signupButton" layoutX="48.0" layoutY="268.0" mnemonicParsing="false" onAction="#signupButtonAction" prefHeight="33.0" prefWidth="207.0" style="-fx-background-color: #65dbe4;" text="Signup" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelButton" layoutX="48.0" layoutY="313.0" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="33.0" prefWidth="207.0" style="-fx-background-color: #65dbe4;" text="Cancel" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="accessMessage" layoutX="16.0" layoutY="246.0" prefHeight="17.0" prefWidth="269.0" textFill="LIME" />
+            <Label layoutX="53.0" layoutY="351.0" text="Already have an Account? try " />
+            <Button fx:id="loginWindow" layoutX="137.0" layoutY="367.0" mnemonicParsing="false" onAction="#loginWindowAction" style="-fx-background-color: #00000000;" text="Login" textFill="#14b7c6">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
